@@ -1,0 +1,30 @@
+{
+    "name": "makeey/array-list",
+    "description": "ArrayList",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Makieiev",
+            "email": "makeey97@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ArrayList\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArrayList\\Test\\": "test/",
+            "ArrayList\\Spec\\": "spec/"
+        }
+    },
+    "require": {
+        "sevavietl/overloaded-function": "@dev"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^4.2",
+        "phpunit/phpunit": "^6.5"
+    }
+}
