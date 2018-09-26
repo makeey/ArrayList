@@ -6,7 +6,7 @@ interface Collection extends \Iterator
 {
     public function add(...$args): bool;
 
-    public function addAll(Collection $collection): bool;
+    public function addAll(...$args): bool;
 
     public function clear(): void;
 
