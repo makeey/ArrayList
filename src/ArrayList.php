@@ -5,7 +5,6 @@ namespace ArrayList;
 
 use Sevavietl\OverloadedFunction\OverloadedFunction;
 use TypeGuard\Guard;
-use ArrayList\Collection;
 
 class ArrayList implements Collection
 {
@@ -123,7 +122,7 @@ class ArrayList implements Collection
 
     public function indexOf($element): int
     {
-        if (!\in_array($element, $this->values, true)) {
+        if (!\in_array($element, $this->values)) {
             return -1;
         }
         return (int)\array_search($element, $this->values, true);
@@ -131,12 +130,12 @@ class ArrayList implements Collection
 
     public function lastIndexOf($element): int
     {
-        if (!\in_array($element, $this->values, true)) {
+        if (!\in_array($element, $this->values)) {
             return -1;
         }
 
         for ($index = \count($this->values) - 1; $index >= 0; $index--) {
-            if ($this->values[$index] === $element) {
+            if ($this->values[$index] == $element) {
                 return $index;
             }
         }
