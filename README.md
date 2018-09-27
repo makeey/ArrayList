@@ -93,5 +93,25 @@ ArrayList have methods with [overloaded](https://en.wikipedia.org/wiki/Function_
 
 - method [clear()](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#clear()) Removes all of the elements from this list.
 ```php
-(new \ArrayList\ArrayList('string',['string1','strign1']))->clear(); //  return clear values 
+(new \ArrayList\ArrayList('string',['string1','strign1']))->clear(); //  clear values 
+```
+
+- method [remove($index)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#remove(int))  Removes the element at the specified position in this list.
+```php
+(new \ArrayList\ArrayList('string',['string1','strign1']))->remove(0); //  return 'string1' 
+```
+
+- method [remove($element)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#remove(java.lang.Object))  Removes the first occurrence of the specified element from this list, if it is present.
+```php
+(new \ArrayList\ArrayList('string',['string1','strign1']))->remove('string1'); //  return 'string1' 
+```
+
+- method [removeAll(ArrayList\Collection $collection)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#removeAll(java.util.Collection)) Removes from this list all of its elements that are contained in the specified collection.
+```php
+(new \ArrayList\ArrayList('string',['string1','strign1']))->removeAll((new ArrayList\ArrayList('string', ['string1'])); //  return true
+```
+
+- method [removeRange(int $from, int to)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#removeRange(int,%20int)) Removes from this list all of its elements that are contained in the specified collection.
+```php
+(new \ArrayList\ArrayList('string', ['string1', 'strign1', 'strign1']))->removeRange(0,1); //  return true
 ```

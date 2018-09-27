@@ -222,7 +222,7 @@ class ArrayList implements Collection
                     return $tmp;
                 },
                 $this->type => function ($element) {
-                    return $this->remove($this->indexOf($element), true);
+                    return $this->remove($this->indexOf($element), true) ? true : false;
                 }
 
             ]
