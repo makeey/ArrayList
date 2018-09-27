@@ -21,7 +21,8 @@
         }
     },
     "require": {
-        "sevavietl/overloaded-function": "@dev"
+        "sevavietl/overloaded-function": "@dev",
+        "php-coveralls/php-coveralls": "^2.1"
     },
     "require-dev": {
         "kahlan/kahlan": "^4.2",
