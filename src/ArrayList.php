@@ -67,19 +67,7 @@ class ArrayList implements Collection
             },
             "integer, {$this->type}" => function ($index, $element) {
                 if (\array_key_exists($index, $this->values)) {
-                    $tmp_array = $this->values;
-                    foreach ($this->values as $key => $value) {
-                        if ($key === $index) {
-                            $tmp_array[$key] = $element;
-                            $tmp_array[$key + 1] = $value;
-                        } elseif ($key < $index) {
-                            $tmp_array[$key] = $value;
-                        } else {
-                            $tmp_array[$key + 1] = $value;
-                        }
-                    }
-                    unset($this->values);
-                    $this->values = $tmp_array;
+                    $this->values = \array_merge(\array_slice($this->values, 0, $index), [$element], \array_slice($this->values, $index));
                     $this->size++;
                 } else {
                     $this->add($element);
