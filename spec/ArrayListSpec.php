@@ -203,6 +203,7 @@ describe('ArrayList', function () {
                 $tmp_array_list->add('string2');
                 $this->arrayList->addAll($tmp_array_list);
                 expect($this->arrayList->isEmpty())->toEqual(false);
+                expect($this->arrayList->size())->toEqual(2);
                 expect($this->arrayList->get(0))->toEqual('string1');
                 expect($this->arrayList->get(1))->toEqual('string2');
             });

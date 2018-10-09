@@ -151,11 +151,8 @@ class ArrayList implements Collection
                         return true;
                     }
                     $this->guardCollectionType($collection);
-                    foreach ($collection as $value) {
-                        $this->values[] = $value;
-                        $this->size++;
-
-                    }
+                    $this->values = \array_merge($this->values, $collection->toArray());
+                    $this->size += $collection->size();
                     return true;
                 },
                 "integer, {$typeCollection}" => function ($index, Collection $collection) {
