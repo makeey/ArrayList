@@ -51,13 +51,13 @@ ArrayList have methods with [overloaded](https://en.wikipedia.org/wiki/Function_
 
 - method [get(int $index)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#get(int)) Returns the element at the specified position in this list. //todo link
 ```php
-(new \ArrayList\ArrayList('string', ['string1']))->get(1); //  throw IndexOutOfBoundsException
+(new \ArrayList\ArrayList('string', ['string1']))->get(1); //  throw OutOfBoundsException
 (new \ArrayList\ArrayList('string', ['string1']))->get(0); // return 'string1'
 ```
 
 - method [set(int $index)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#set(int,%20E)) Replaces the element at the specified position in this list with the specified element.
 ```php
-(new \ArrayList\ArrayList('string', ['string1']))->set(1, 'string2'); //  throw IndexOutOfBoundsException
+(new \ArrayList\ArrayList('string', ['string1']))->set(1, 'string2'); //  throw OutOfBoundsException
 (new \ArrayList\ArrayList('string', ['string1']))->set(0, 'string2'); // set new value
 (new \ArrayList\ArrayList('string', ['string1']))->set(0, 2); // throw exception
 ```

@@ -6,7 +6,6 @@ namespace ArrayList\Spec;
 use ArrayList\ArrayList;
 use ArrayList\ClassCastException;
 use ArrayList\Collection;
-use ArrayList\IndexOutOfBoundsException;
 use Sevavietl\OverloadedFunction\UnknownSignatureException;
 
 describe('ArrayList', function () {
@@ -88,21 +87,21 @@ describe('ArrayList', function () {
             expect($this->arrayList->get(0))->toEqual('string2');
         });
 
-        it('Must throw exception "IndexOutOfBoundsException"', function () {
+        it('Must throw exception "OutOfBoundsException"', function () {
             $closure = function () {
                 $this->arrayList->get(3);
             };
-            expect($closure)->toThrow(new IndexOutOfBoundsException());
+            expect($closure)->toThrow(new \OutOfBoundsException());
         });
     });
 
     describe('Replaces the element at the specified position in this list with the specified element.', function () {
 
-        it('Must throw exception "IndexOutOfBoundsException"', function () {
+        it('Must throw exception "OutOfBoundsException"', function () {
             $closure = function () {
                 $this->arrayList->set(2, 'string2');
             };
-            expect($closure)->toThrow(new IndexOutOfBoundsException());
+            expect($closure)->toThrow(new \OutOfBoundsException());
         });
 
         it('Must throw exception InvalidArgumentException', function () {
@@ -370,7 +369,7 @@ If all elements are so contained true is returned, otherwise false.',
                 $closure = function(){
                     $this->arrayList->removeRange(10,15);
                 };
-                expect($closure)->toThrow(new IndexOutOfBoundsException());
+                expect($closure)->toThrow(new \OutOfBoundsException());
 
             });
             it('to remove range with wrong range', function () {

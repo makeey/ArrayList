@@ -81,7 +81,7 @@ class ArrayList implements Collection
     public function get(int $index)
     {
         if (!array_key_exists($index, $this->values)) {
-            throw new IndexOutOfBoundsException('Out of range');
+            throw new \OutOfBoundsException('Out of range');
         }
         return $this->values[$index];
     }
@@ -89,7 +89,7 @@ class ArrayList implements Collection
     public function set(int $index, $element): void
     {
         if (!array_key_exists($index, $this->values)) {
-            throw new IndexOutOfBoundsException('Out of range');
+            throw new \OutOfBoundsException('Out of range');
         }
         if (!$this->typeGuard->match($element)) {
             throw new \InvalidArgumentException("Elements was be instance of {$this->type}");
@@ -161,7 +161,7 @@ class ArrayList implements Collection
                 "integer, {$typeCollection}" => function ($index, Collection $collection) {
 
                     if (!array_key_exists($index, $this->values)) {
-                        throw new IndexOutOfBoundsException('Out of range');
+                        throw new \OutOfBoundsException('Out of range');
                     }
                     if ($collection->isEmpty()) {
                         return true;
@@ -269,7 +269,7 @@ class ArrayList implements Collection
         }
 
         if ($from === $to || $from < 0 || $from > $to || $to > $this->size()) {
-            throw new IndexOutOfBoundsException();
+            throw new \OutOfBoundsException();
         }
 
         foreach (range($to, $from) as $value) {
