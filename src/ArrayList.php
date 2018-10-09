@@ -167,12 +167,8 @@ class ArrayList implements Collection
                         return true;
                     }
                     $this->guardCollectionType($collection);
-                    $tmp = \array_slice($this->values, 0, $index);
-                    $tmp = array_merge($tmp, $collection->toArray());
-                    $tmp = array_merge($tmp, \array_slice($this->values, $index));
-                    $this->values = $tmp;
+                    $this->values = \array_merge(\array_slice($this->values, 0, $index), $collection->toArray(), \array_slice($this->values, $index));
                     $this->size += $collection->size();
-                    unset($tmp);
                     return true;
                 }
             ]
