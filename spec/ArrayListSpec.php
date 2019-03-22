@@ -273,9 +273,7 @@ If all elements are so contained true is returned, otherwise false.',
             });
         }
     );
-    // end indexOf
 
-    // to array
     describe('to array',
         function () {
 
@@ -287,9 +285,7 @@ If all elements are so contained true is returned, otherwise false.',
             });
         }
     );
-    // end to array
 
-    // to remove by index
     describe('remove element by index and object',
         function () {
 

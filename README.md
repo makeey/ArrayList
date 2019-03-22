@@ -49,7 +49,7 @@ ArrayList have methods with [overloaded](https://en.wikipedia.org/wiki/Function_
 (new \ArrayList\ArrayList('string', ['1', '2', '3']))->isEmtpy(); //to be false
 ```
 
-- method [get(int $index)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#get(int)) Returns the element at the specified position in this list. //todo link
+- method [get(int $index)](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#get(int)) Returns the element at the specified position in this list.
 ```php
 (new \ArrayList\ArrayList('string', ['string1']))->get(1); //  throw OutOfBoundsException
 (new \ArrayList\ArrayList('string', ['string1']))->get(0); // return 'string1'
